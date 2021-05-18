@@ -11,4 +11,4 @@ ADD nginx.conf /etc/nginx/
 ADD index.html /www/
 #Start Service
 EXPOSE 80
-CMD ["nginx" "-g" "daemon off;"]
+CMD /etc/init.d/nginx start && /bin/sh
